@@ -1,0 +1,181 @@
+****************************************
+Report : timing
+	-path_type full
+	-delay_type max
+	-max_paths 1
+	-sort_by slack
+Design : FP
+Version: T-2022.03
+Date   : Wed Mar 20 00:44:26 2024
+****************************************
+
+
+  Startpoint: EXP_ADD[2].ADDER1/O_reg[1]
+               (rising edge-triggered flip-flop clocked by Clock)
+  Endpoint: EXP_ADD[3].ADDER1/A_Prog0_reg[1]
+               (rising edge-triggered flip-flop clocked by Clock)
+  Path Group: Clock
+  Path Type: max
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock Clock (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  EXP_ADD[2].ADDER1/O_reg[1]/CP (DFCNQD4BWP40P140)        0.00       0.00 r
+  EXP_ADD[2].ADDER1/O_reg[1]/Q (DFCNQD4BWP40P140)         0.04       0.04 f
+  EXP_ADD[2].ADDER1/U3/ZN (NR2OPTIBD6BWP40P140)           0.01       0.05 r
+  EXP_ADD[2].ADDER1/U19/ZN (INVD6BWP40P140)               0.01       0.06 f
+  EXP_ADD[2].ADDER1/PA/U1/ZN (INR2D4BWP40P140)            0.01       0.07 r
+  EXP_ADD[2].ADDER1/SEL1/U2/ZN (INVD1BWP40P140)           0.01       0.08 f
+  EXP_ADD[2].ADDER1/SEL1/U7/ZN (NR2OPTPAD2BWP40P140)      0.01       0.09 r
+  EXP_ADD[2].ADDER1/CAL/P01/U1/ZN (XNR2OPTND2BWP40P140)
+                                                          0.02       0.10 r
+  EXP_ADD[2].ADDER1/CAL/P01/U2/ZN (XNR2OPTND4BWP40P140)
+                                                          0.02       0.12 f
+  EXP_ADD[2].ADDER1/CAL/P11/U1/ZN (OAI21D2BWP40P140)      0.01       0.13 r
+  EXP_ADD[2].ADDER1/CAL/P11/U4/ZN (ND2OPTPAD2BWP40P140)
+                                                          0.01       0.14 f
+  EXP_ADD[2].ADDER1/CAL/P12/U2/ZN (INVD2BWP40P140)        0.01       0.15 r
+  EXP_ADD[2].ADDER1/CAL/P12/U4/ZN (OAI21D2BWP40P140)      0.01       0.16 f
+  EXP_ADD[2].ADDER1/CAL/P13/U4/ZN (AOI21D2BWP40P140)      0.01       0.17 r
+  EXP_ADD[2].ADDER1/CAL/P13/U1/ZN (INVD2BWP40P140)        0.01       0.18 f
+  EXP_ADD[2].ADDER1/CAL/P14/U5/ZN (ND2OPTPAD4BWP40P140)
+                                                          0.01       0.18 r
+  EXP_ADD[2].ADDER1/CAL/P14/U6/ZN (ND2OPTPAD6BWP40P140)
+                                                          0.01       0.19 f
+  EXP_ADD[2].ADDER1/CAL/P15/U1/Z (XOR2OPTND8BWP40P140)
+                                                          0.02       0.21 f
+  EXP_ADD[2].ADDER1/U4/Z (XOR2OPTND6BWP40P140)            0.02       0.23 f
+  EXP_ADD[2].ADDER1/SEL2/U3/ZN (INVD12BWP40P140)          0.01       0.24 r
+  EXP_ADD[2].ADDER1/SEL2/U82/ZN (INVD15BWP40P140)         0.01       0.26 f
+  EXP_ADD[2].ADDER1/SEL2/U27/ZN (MUX2NOPTD4BWP40P140)     0.02       0.27 f
+  EXP_ADD[2].ADDER1/SHIFT/U27/ZN (AOI22D1BWP40P140)       0.02       0.29 r
+  EXP_ADD[2].ADDER1/SHIFT/U9/ZN (ND3D1BWP40P140)          0.02       0.31 f
+  EXP_ADD[2].ADDER1/SHIFT/U209/ZN (OAI211OPTREPBD2BWP40P140)
+                                                          0.01       0.32 r
+  EXP_ADD[2].ADDER1/SHIFT/U137/ZN (OAI22D2BWP40P140)      0.02       0.34 f
+  EXP_ADD[2].ADDER1/CAL_26BIT/P00/U1/ZN (INVD2BWP40P140)
+                                                          0.01       0.34 r
+  EXP_ADD[2].ADDER1/CAL_26BIT/P00/U3/ZN (NR2OPTPAD2BWP40P140)
+                                                          0.01       0.35 f
+  EXP_ADD[2].ADDER1/CAL_26BIT/P01/U5/ZN (INVD2BWP40P140)
+                                                          0.01       0.36 r
+  EXP_ADD[2].ADDER1/CAL_26BIT/P01/U4/ZN (OAI21D2BWP40P140)
+                                                          0.01       0.37 f
+  EXP_ADD[2].ADDER1/CAL_26BIT/P02/U5/ZN (NR2OPTPAD2BWP40P140)
+                                                          0.01       0.37 r
+  EXP_ADD[2].ADDER1/CAL_26BIT/P02/U2/ZN (NR2D2BWP40P140)
+                                                          0.01       0.38 f
+  EXP_ADD[2].ADDER1/CAL_26BIT/P03/U4/ZN (AOI21D2BWP40P140)
+                                                          0.01       0.39 r
+  EXP_ADD[2].ADDER1/CAL_26BIT/P03/U3/ZN (INVD2BWP40P140)
+                                                          0.01       0.40 f
+  EXP_ADD[2].ADDER1/CAL_26BIT/P04/U4/ZN (AOI21D2BWP40P140)
+                                                          0.01       0.41 r
+  EXP_ADD[2].ADDER1/CAL_26BIT/P04/U3/ZN (INVD2BWP40P140)
+                                                          0.01       0.41 f
+  EXP_ADD[2].ADDER1/CAL_26BIT/P05/U6/ZN (AOI21D2BWP40P140)
+                                                          0.01       0.42 r
+  EXP_ADD[2].ADDER1/CAL_26BIT/P05/U5/ZN (INVD2BWP40P140)
+                                                          0.01       0.43 f
+  EXP_ADD[2].ADDER1/CAL_26BIT/P06/U3/ZN (AOI21D2BWP40P140)
+                                                          0.01       0.44 r
+  EXP_ADD[2].ADDER1/CAL_26BIT/P06/U2/ZN (INVD2BWP40P140)
+                                                          0.01       0.44 f
+  EXP_ADD[2].ADDER1/CAL_26BIT/P07/U5/ZN (AOI21D2BWP40P140)
+                                                          0.01       0.45 r
+  EXP_ADD[2].ADDER1/CAL_26BIT/P07/U4/ZN (INVD2BWP40P140)
+                                                          0.01       0.46 f
+  EXP_ADD[2].ADDER1/CAL_26BIT/P08/U4/ZN (AOI21D2BWP40P140)
+                                                          0.01       0.47 r
+  EXP_ADD[2].ADDER1/CAL_26BIT/P08/U3/ZN (INVD2BWP40P140)
+                                                          0.01       0.48 f
+  EXP_ADD[2].ADDER1/CAL_26BIT/P09/U5/ZN (ND2OPTPAD2BWP40P140)
+                                                          0.01       0.48 r
+  EXP_ADD[2].ADDER1/CAL_26BIT/P09/U1/ZN (ND2OPTPAD4BWP40P140)
+                                                          0.01       0.49 f
+  EXP_ADD[2].ADDER1/CAL_26BIT/P10/U5/ZN (AOI21D2BWP40P140)
+                                                          0.01       0.50 r
+  EXP_ADD[2].ADDER1/CAL_26BIT/P10/U4/ZN (INVD2BWP40P140)
+                                                          0.01       0.51 f
+  EXP_ADD[2].ADDER1/CAL_26BIT/P11/U4/ZN (AOI21D2BWP40P140)
+                                                          0.01       0.51 r
+  EXP_ADD[2].ADDER1/CAL_26BIT/P11/U3/ZN (INVD2BWP40P140)
+                                                          0.01       0.52 f
+  EXP_ADD[2].ADDER1/CAL_26BIT/P12/U5/ZN (AOI21D2BWP40P140)
+                                                          0.01       0.53 r
+  EXP_ADD[2].ADDER1/CAL_26BIT/P12/U1/ZN (INVD3BWP40P140)
+                                                          0.01       0.54 f
+  EXP_ADD[2].ADDER1/CAL_26BIT/P13/U4/ZN (AOI21D4BWP40P140)
+                                                          0.01       0.55 r
+  EXP_ADD[2].ADDER1/CAL_26BIT/P14/U3/ZN (IOA22D4BWP40P140)
+                                                          0.01       0.56 f
+  EXP_ADD[2].ADDER1/CAL_26BIT/P15/U2/ZN (ND2OPTPAD2BWP40P140)
+                                                          0.01       0.57 r
+  EXP_ADD[2].ADDER1/CAL_26BIT/P15/U1/ZN (ND2OPTPAD2BWP40P140)
+                                                          0.01       0.57 f
+  EXP_ADD[2].ADDER1/CAL_26BIT/P16/U4/ZN (AOI21D2BWP40P140)
+                                                          0.01       0.58 r
+  EXP_ADD[2].ADDER1/CAL_26BIT/P16/U3/ZN (INVD2BWP40P140)
+                                                          0.01       0.59 f
+  EXP_ADD[2].ADDER1/CAL_26BIT/P17/U5/ZN (AOI21D2BWP40P140)
+                                                          0.01       0.60 r
+  EXP_ADD[2].ADDER1/CAL_26BIT/P17/U4/ZN (INVD2BWP40P140)
+                                                          0.01       0.61 f
+  EXP_ADD[2].ADDER1/CAL_26BIT/P18/U4/ZN (ND2OPTPAD2BWP40P140)
+                                                          0.01       0.61 r
+  EXP_ADD[2].ADDER1/CAL_26BIT/P18/U2/ZN (ND2OPTPAD2BWP40P140)
+                                                          0.01       0.62 f
+  EXP_ADD[2].ADDER1/CAL_26BIT/P19/U4/ZN (ND2OPTPAD2BWP40P140)
+                                                          0.01       0.62 r
+  EXP_ADD[2].ADDER1/CAL_26BIT/P19/U8/ZN (IOA21D2BWP40P140)
+                                                          0.01       0.63 f
+  EXP_ADD[2].ADDER1/CAL_26BIT/P20/U6/ZN (AOI21D2BWP40P140)
+                                                          0.01       0.64 r
+  EXP_ADD[2].ADDER1/CAL_26BIT/P20/U5/ZN (INVD2BWP40P140)
+                                                          0.01       0.65 f
+  EXP_ADD[2].ADDER1/CAL_26BIT/P21/U4/ZN (AOI21D2BWP40P140)
+                                                          0.01       0.66 r
+  EXP_ADD[2].ADDER1/CAL_26BIT/P21/U3/ZN (INVD2BWP40P140)
+                                                          0.01       0.67 f
+  EXP_ADD[2].ADDER1/CAL_26BIT/P22/U6/ZN (AOI21D2BWP40P140)
+                                                          0.01       0.68 r
+  EXP_ADD[2].ADDER1/CAL_26BIT/P22/U5/ZN (INVD2BWP40P140)
+                                                          0.01       0.68 f
+  EXP_ADD[2].ADDER1/CAL_26BIT/P23/U2/ZN (AOI21D4BWP40P140)
+                                                          0.01       0.69 r
+  EXP_ADD[2].ADDER1/CAL_26BIT/P23/U3/ZN (INVD4BWP40P140)
+                                                          0.01       0.70 f
+  EXP_ADD[2].ADDER1/CAL_26BIT/P24/U3/ZN (AOI21D4BWP40P140)
+                                                          0.01       0.71 r
+  EXP_ADD[2].ADDER1/CAL_26BIT/P24/U4/ZN (INVD4BWP40P140)
+                                                          0.01       0.72 f
+  EXP_ADD[2].ADDER1/CAL_26BIT/P25/U1/Z (XOR2OPTND4BWP40P140)
+                                                          0.02       0.73 f
+  EXP_ADD[2].ADDER1/CAL_26BIT/U31/Z (XOR2OPTND6BWP40P140)
+                                                          0.02       0.75 f
+  EXP_ADD[2].ADDER1/U6/ZN (INR2D6BWP40P140)               0.01       0.76 r
+  EXP_ADD[2].ADDER1/U5/ZN (INVD4BWP40P140)                0.01       0.77 f
+  EXP_ADD[2].ADDER1/C_L2/U2/ZN (INVD4BWP40P140)           0.01       0.77 r
+  EXP_ADD[2].ADDER1/C_L2/U3/ZN (NR2OPTPAD4BWP40P140)      0.01       0.78 f
+  EXP_ADD[2].ADDER1/U20/Z (XOR2OPTND4BWP40P140)           0.01       0.79 r
+  EXP_ADD[2].ADDER1/U18/ZN (XNR2OPTND4BWP40P140)          0.02       0.81 r
+  EXP_ADD[3].ADDER1/A_Prog0_reg[1]/D (DFCNQD1BWP40P140)
+                                                          0.00       0.81 r
+  data arrival time                                                  0.81
+
+  clock Clock (rise edge)                                 1.03       1.03
+  clock network delay (ideal)                             0.00       1.03
+  clock reconvergence pessimism                           0.00       1.03
+  clock uncertainty                                      -0.21       0.82
+  EXP_ADD[3].ADDER1/A_Prog0_reg[1]/CP (DFCNQD1BWP40P140)             0.82 r
+  library setup time                                     -0.02       0.81
+  data required time                                                 0.81
+  ------------------------------------------------------------------------------
+  data required time                                                 0.81
+  data arrival time                                                 -0.81
+  ------------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+1

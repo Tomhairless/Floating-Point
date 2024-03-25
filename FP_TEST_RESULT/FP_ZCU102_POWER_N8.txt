@@ -1,0 +1,288 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+-------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version     : Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
+| Date             : Sun Dec  3 11:40:25 2023
+| Host             : LAPTOP-26QAC18T running 64-bit major release  (build 9200)
+| Command          : report_power -file C:/Users/asus/Desktop/FP_TEST_RESULT/FP_ZCU102_POWER_N8.txt -name FP_ZCU102_POWER_N8
+| Design           : FP
+| Device           : xczu9eg-ffvb1156-2-e
+| Design State     : synthesized
+| Grade            : extended
+| Process          : typical
+| Characterization : Production
+-------------------------------------------------------------------------------------------------------------------------------------------------
+
+Power Report
+
+Table of Contents
+-----------------
+1. Summary
+1.1 On-Chip Components
+1.2 Power Supply Summary
+1.3 Confidence Level
+2. Settings
+2.1 Environment
+2.2 Clock Constraints
+3. Detailed Reports
+3.1 By Hierarchy
+
+1. Summary
+----------
+
++--------------------------+--------------+
+| Total On-Chip Power (W)  | 1.209        |
+| Design Power Budget (W)  | Unspecified* |
+| Power Budget Margin (W)  | NA           |
+| Dynamic (W)              | 0.586        |
+| Device Static (W)        | 0.623        |
+| Effective TJA (C/W)      | 1.0          |
+| Max Ambient (C)          | 98.8         |
+| Junction Temperature (C) | 26.2         |
+| Confidence Level         | Low          |
+| Setting File             | ---          |
+| Simulation Activity File | ---          |
+| Design Nets Matched      | NA           |
++--------------------------+--------------+
+* Specify Design Power Budget using, set_operating_conditions -design_power_budget <value in Watts>
+
+
+1.1 On-Chip Components
+----------------------
+
++-------------------------+-----------+----------+-----------+-----------------+
+| On-Chip                 | Power (W) | Used     | Available | Utilization (%) |
++-------------------------+-----------+----------+-----------+-----------------+
+| Clocks                  |     0.053 |        3 |       --- |             --- |
+| CLB Logic               |     0.231 |    29221 |       --- |             --- |
+|   LUT as Logic          |     0.219 |    15743 |    274080 |            5.74 |
+|   Register              |     0.008 |     9209 |    548160 |            1.68 |
+|   LUT as Shift Register |     0.005 |      384 |    144000 |            0.27 |
+|   CARRY8                |    <0.001 |        9 |     34260 |            0.03 |
+|   Others                |     0.000 |      185 |       --- |             --- |
+| Signals                 |     0.203 |    25467 |       --- |             --- |
+| I/O                     |     0.098 |     1258 |       328 |          383.54 |
+| Static Power            |     0.623 |          |           |                 |
+| Total                   |     1.209 |          |           |                 |
++-------------------------+-----------+----------+-----------+-----------------+
+
+
+1.2 Power Supply Summary
+------------------------
+
++-----------------+-------------+-----------+-------------+------------+-------------+-------------+------------+
+| Source          | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
++-----------------+-------------+-----------+-------------+------------+-------------+-------------+------------+
+| Vccint          |       0.850 |     0.756 |       0.573 |      0.183 |       NA    | Unspecified | NA         |
+| Vccint_io       |       0.850 |     0.046 |       0.011 |      0.035 |       NA    | Unspecified | NA         |
+| Vccbram         |       0.850 |     0.003 |       0.000 |      0.003 |       NA    | Unspecified | NA         |
+| Vccaux          |       1.800 |     0.194 |       0.000 |      0.194 |       NA    | Unspecified | NA         |
+| Vccaux_io       |       1.800 |     0.056 |       0.023 |      0.033 |       NA    | Unspecified | NA         |
+| Vcco33          |       3.300 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vcco25          |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vcco18          |       1.800 |     0.027 |       0.027 |      0.000 |       NA    | Unspecified | NA         |
+| Vcco15          |       1.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vcco135         |       1.350 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vcco12          |       1.200 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vcco10          |       1.000 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vccadc          |       1.800 |     0.008 |       0.000 |      0.008 |       NA    | Unspecified | NA         |
+| VCC_PSINTFP     |       0.850 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| VCC_PSINTLP     |       0.850 |     0.005 |       0.000 |      0.005 |       NA    | Unspecified | NA         |
+| VPS_MGTRAVCC    |       0.850 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| VCC_PSINTFP_DDR |       0.850 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| VCC_PSPLL       |       1.200 |     0.002 |       0.000 |      0.002 |       NA    | Unspecified | NA         |
+| VPS_MGTRAVTT    |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| VCCO_PSDDR_504  |       1.200 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| VCC_PSAUX       |       1.800 |     0.002 |       0.000 |      0.002 |       NA    | Unspecified | NA         |
+| VCC_PSBATT      |       1.200 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| VCC_PSDDR_PLL   |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| VCCO_PSIO0_500  |       3.300 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| VCCO_PSIO1_501  |       3.300 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| VCCO_PSIO2_502  |       3.300 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| VCCO_PSIO3_503  |       3.300 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| VCC_PSADC       |       1.800 |     0.002 |       0.000 |      0.002 |       NA    | Unspecified | NA         |
+| MGTAVcc         |       0.900 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| MGTAVtt         |       1.200 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| MGTVccaux       |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
++-----------------+-------------+-----------+-------------+------------+-------------+-------------+------------+
+
+
+1.3 Confidence Level
+--------------------
+
++-----------------------------+------------+--------------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+| User Input Data             | Confidence | Details                                                | Action                                                                                                     |
++-----------------------------+------------+--------------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+| Design implementation state | Low        | Design is synthesized                                  | Accuracy of the tool is not optimal until design is fully placed and routed                                |
+| Clock nodes activity        | High       | User specified more than 95% of clocks                 |                                                                                                            |
+| I/O nodes activity          | Low        | More than 75% of inputs are missing user specification | Provide missing input activity with simulation results or by editing the "By Resource Type -> I/Os" view   |
+| Internal nodes activity     | Medium     | User specified less than 25% of internal nodes         | Provide missing internal nodes activity with simulation results or by editing the "By Resource Type" views |
+| Device models               | High       | Device models are Production                           |                                                                                                            |
+|                             |            |                                                        |                                                                                                            |
+| Overall confidence level    | Low        |                                                        |                                                                                                            |
++-----------------------------+------------+--------------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+
+
+2. Settings
+-----------
+
+2.1 Environment
+---------------
+
++-----------------------+--------------------------+
+| Ambient Temp (C)      | 25.0                     |
+| ThetaJA (C/W)         | 1.0                      |
+| Airflow (LFM)         | 250                      |
+| Heat Sink             | medium (Medium Profile)  |
+| ThetaSA (C/W)         | 1.5                      |
+| Board Selection       | medium (10"x10")         |
+| # of Board Layers     | 12to15 (12 to 15 Layers) |
+| Board Temperature (C) | 25.0                     |
++-----------------------+--------------------------+
+
+
+2.2 Clock Constraints
+---------------------
+
++-------+--------+-----------------+
+| Clock | Domain | Constraint (ns) |
++-------+--------+-----------------+
+| Clk   | Clock  |             8.0 |
++-------+--------+-----------------+
+
+
+3. Detailed Reports
+-------------------
+
+3.1 By Hierarchy
+----------------
+
++------------------------+-----------+
+| Name                   | Power (W) |
++------------------------+-----------+
+| FP                     |     0.586 |
+|   ADDER_SP_0           |     0.004 |
+|   ADDER_SP_1           |     0.005 |
+|   EXP_ADD[1].ADDER0    |     0.008 |
+|   EXP_ADD[1].ADDER1    |     0.008 |
+|   EXP_ADD[1].ADDER2    |     0.008 |
+|   EXP_ADD[1].EXPONENT0 |     0.001 |
+|   EXP_ADD[2].ADDER0    |     0.009 |
+|   EXP_ADD[2].ADDER1    |     0.008 |
+|   EXP_ADD[2].ADDER2    |     0.008 |
+|   EXP_ADD[2].EXPONENT0 |     0.001 |
+|   EXP_ADD[3].ADDER0    |     0.009 |
+|   EXP_ADD[3].ADDER1    |     0.008 |
+|   EXP_ADD[3].ADDER2    |     0.008 |
+|   EXP_ADD[3].EXPONENT0 |     0.001 |
+|   EXP_ADD[4].ADDER0    |     0.009 |
+|   EXP_ADD[4].ADDER1    |     0.008 |
+|   EXP_ADD[4].ADDER2    |     0.008 |
+|   EXP_ADD[4].EXPONENT0 |     0.001 |
+|   EXP_ADD[5].ADDER0    |     0.009 |
+|   EXP_ADD[5].ADDER1    |     0.008 |
+|   EXP_ADD[5].ADDER2    |     0.008 |
+|   EXP_ADD[5].EXPONENT0 |     0.001 |
+|   EXP_ADD[5].EXPONENT1 |     0.001 |
+|   EXP_ADD[6].ADDER0    |     0.009 |
+|   EXP_ADD[6].ADDER1    |     0.008 |
+|   EXP_ADD[6].ADDER2    |     0.008 |
+|   EXP_ADD[6].EXPONENT0 |     0.002 |
+|   EXP_ADD[6].EXPONENT1 |     0.001 |
+|   EXP_ADD[7].ADDER0    |     0.011 |
+|   EXP_ADD[7].ADDER1    |     0.010 |
+|   EXP_ADD[7].ADDER2    |     0.008 |
+|   EXP_ADD[7].EXPONENT0 |     0.002 |
+|   EXP_ADD[7].EXPONENT1 |     0.001 |
+|   EXP_ADD[7].EXPONENT2 |     0.001 |
+|   LAYER[0].INPUT0      |     0.006 |
+|   LAYER[0].PE00        |     0.002 |
+|   LAYER[0].PE01        |     0.002 |
+|   LAYER[0].PE02        |     0.001 |
+|   LAYER[0].PE10        |     0.003 |
+|   LAYER[0].PE11        |     0.004 |
+|   LAYER[0].PE12        |     0.003 |
+|   LAYER[0].PE20        |     0.004 |
+|   LAYER[0].PE21        |     0.004 |
+|   LAYER[0].PE22        |     0.004 |
+|   LAYER[1].INPUT0      |     0.005 |
+|   LAYER[1].PE00        |     0.002 |
+|   LAYER[1].PE01        |     0.002 |
+|   LAYER[1].PE02        |     0.001 |
+|   LAYER[1].PE10        |     0.003 |
+|   LAYER[1].PE11        |     0.004 |
+|   LAYER[1].PE12        |     0.003 |
+|   LAYER[1].PE20        |     0.004 |
+|   LAYER[1].PE21        |     0.004 |
+|   LAYER[1].PE22        |     0.004 |
+|   LAYER[2].INPUT0      |     0.004 |
+|   LAYER[2].PE00        |     0.002 |
+|   LAYER[2].PE01        |     0.002 |
+|   LAYER[2].PE02        |     0.001 |
+|   LAYER[2].PE10        |     0.003 |
+|   LAYER[2].PE11        |     0.004 |
+|   LAYER[2].PE12        |     0.003 |
+|   LAYER[2].PE20        |     0.004 |
+|   LAYER[2].PE21        |     0.004 |
+|   LAYER[2].PE22        |     0.004 |
+|   LAYER[3].INPUT0      |     0.004 |
+|   LAYER[3].PE00        |     0.002 |
+|   LAYER[3].PE01        |     0.002 |
+|   LAYER[3].PE02        |     0.001 |
+|   LAYER[3].PE10        |     0.003 |
+|   LAYER[3].PE11        |     0.004 |
+|   LAYER[3].PE12        |     0.003 |
+|   LAYER[3].PE20        |     0.004 |
+|   LAYER[3].PE21        |     0.004 |
+|   LAYER[3].PE22        |     0.004 |
+|   LAYER[4].INPUT0      |     0.004 |
+|   LAYER[4].PE00        |     0.002 |
+|   LAYER[4].PE01        |     0.002 |
+|   LAYER[4].PE02        |     0.001 |
+|   LAYER[4].PE10        |     0.003 |
+|   LAYER[4].PE11        |     0.004 |
+|   LAYER[4].PE12        |     0.003 |
+|   LAYER[4].PE20        |     0.004 |
+|   LAYER[4].PE21        |     0.004 |
+|   LAYER[4].PE22        |     0.004 |
+|   LAYER[5].INPUT0      |     0.004 |
+|   LAYER[5].PE00        |     0.002 |
+|   LAYER[5].PE01        |     0.002 |
+|   LAYER[5].PE02        |     0.001 |
+|   LAYER[5].PE10        |     0.003 |
+|   LAYER[5].PE11        |     0.004 |
+|   LAYER[5].PE12        |     0.003 |
+|   LAYER[5].PE20        |     0.004 |
+|   LAYER[5].PE21        |     0.004 |
+|   LAYER[5].PE22        |     0.004 |
+|   LAYER[6].INPUT0      |     0.004 |
+|   LAYER[6].PE00        |     0.002 |
+|   LAYER[6].PE01        |     0.002 |
+|   LAYER[6].PE02        |     0.001 |
+|   LAYER[6].PE10        |     0.003 |
+|   LAYER[6].PE11        |     0.004 |
+|   LAYER[6].PE12        |     0.003 |
+|   LAYER[6].PE20        |     0.004 |
+|   LAYER[6].PE21        |     0.004 |
+|   LAYER[6].PE22        |     0.004 |
+|   LAYER[7].INPUT0      |     0.004 |
+|   LAYER[7].PE00        |     0.002 |
+|   LAYER[7].PE01        |     0.002 |
+|   LAYER[7].PE02        |     0.001 |
+|   LAYER[7].PE10        |     0.003 |
+|   LAYER[7].PE11        |     0.004 |
+|   LAYER[7].PE12        |     0.003 |
+|   LAYER[7].PE20        |     0.004 |
+|   LAYER[7].PE21        |     0.004 |
+|   LAYER[7].PE22        |     0.004 |
+|   OUTPUT0              |     0.006 |
+|     DSHIFT             |     0.005 |
+|     OVERFLOW           |     0.001 |
+|   OUTPUT1              |     0.005 |
+|     DSHIFT             |     0.004 |
+|     OVERFLOW           |     0.001 |
+|   OUTPUT2              |     0.008 |
+|     DSHIFT             |     0.005 |
+|     OVERFLOW           |     0.002 |
++------------------------+-----------+
+
+

@@ -1,0 +1,1283 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+-------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version     : Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
+| Date             : Sun Dec  3 13:56:53 2023
+| Host             : LAPTOP-26QAC18T running 64-bit major release  (build 9200)
+| Command          : report_power -file C:/Users/asus/Desktop/FP_TEST_RESULT/FP_ZCU102_POWER_N70.txt -name FP_ZCU102_POWER_N70
+| Design           : FP
+| Device           : xczu9eg-ffvb1156-2-e
+| Design State     : synthesized
+| Grade            : extended
+| Process          : typical
+| Characterization : Production
+-------------------------------------------------------------------------------------------------------------------------------------------------
+
+Power Report
+
+Table of Contents
+-----------------
+1. Summary
+1.1 On-Chip Components
+1.2 Power Supply Summary
+1.3 Confidence Level
+2. Settings
+2.1 Environment
+2.2 Clock Constraints
+3. Detailed Reports
+3.1 By Hierarchy
+
+1. Summary
+----------
+
++--------------------------+--------------+
+| Total On-Chip Power (W)  | 5.107        |
+| Design Power Budget (W)  | Unspecified* |
+| Power Budget Margin (W)  | NA           |
+| Dynamic (W)              | 4.460        |
+| Device Static (W)        | 0.647        |
+| Effective TJA (C/W)      | 1.0          |
+| Max Ambient (C)          | 95.0         |
+| Junction Temperature (C) | 30.0         |
+| Confidence Level         | Low          |
+| Setting File             | ---          |
+| Simulation Activity File | ---          |
+| Design Nets Matched      | NA           |
++--------------------------+--------------+
+* Specify Design Power Budget using, set_operating_conditions -design_power_budget <value in Watts>
+
+
+1.1 On-Chip Components
+----------------------
+
++-------------------------+-----------+----------+-----------+-----------------+
+| On-Chip                 | Power (W) | Used     | Available | Utilization (%) |
++-------------------------+-----------+----------+-----------+-----------------+
+| Clocks                  |     0.329 |        3 |       --- |             --- |
+| CLB Logic               |     2.124 |   250956 |       --- |             --- |
+|   LUT as Logic          |     2.016 |   135215 |    274080 |           49.33 |
+|   Register              |     0.066 |    76864 |    548160 |           14.02 |
+|   LUT as Shift Register |     0.042 |     3360 |    144000 |            2.33 |
+|   CARRY8                |    <0.001 |        9 |     34260 |            0.03 |
+|   Others                |     0.000 |     1425 |       --- |             --- |
+| Signals                 |     1.832 |   218602 |       --- |             --- |
+| I/O                     |     0.175 |    10186 |       328 |         3105.49 |
+| Static Power            |     0.647 |          |           |                 |
+| Total                   |     5.107 |          |           |                 |
++-------------------------+-----------+----------+-----------+-----------------+
+
+
+1.2 Power Supply Summary
+------------------------
+
++-----------------+-------------+-----------+-------------+------------+-------------+-------------+------------+
+| Source          | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
++-----------------+-------------+-----------+-------------+------------+-------------+-------------+------------+
+| Vccint          |       0.850 |     5.254 |       5.041 |      0.213 |       NA    | Unspecified | NA         |
+| Vccint_io       |       0.850 |     0.107 |       0.071 |      0.036 |       NA    | Unspecified | NA         |
+| Vccbram         |       0.850 |     0.003 |       0.000 |      0.003 |       NA    | Unspecified | NA         |
+| Vccaux          |       1.800 |     0.192 |       0.000 |      0.192 |       NA    | Unspecified | NA         |
+| Vccaux_io       |       1.800 |     0.056 |       0.023 |      0.033 |       NA    | Unspecified | NA         |
+| Vcco33          |       3.300 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vcco25          |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vcco18          |       1.800 |     0.041 |       0.041 |      0.000 |       NA    | Unspecified | NA         |
+| Vcco15          |       1.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vcco135         |       1.350 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vcco12          |       1.200 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vcco10          |       1.000 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vccadc          |       1.800 |     0.008 |       0.000 |      0.008 |       NA    | Unspecified | NA         |
+| VCC_PSINTFP     |       0.850 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| VCC_PSINTLP     |       0.850 |     0.006 |       0.000 |      0.006 |       NA    | Unspecified | NA         |
+| VPS_MGTRAVCC    |       0.850 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| VCC_PSINTFP_DDR |       0.850 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| VCC_PSPLL       |       1.200 |     0.002 |       0.000 |      0.002 |       NA    | Unspecified | NA         |
+| VPS_MGTRAVTT    |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| VCCO_PSDDR_504  |       1.200 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| VCC_PSAUX       |       1.800 |     0.002 |       0.000 |      0.002 |       NA    | Unspecified | NA         |
+| VCC_PSBATT      |       1.200 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| VCC_PSDDR_PLL   |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| VCCO_PSIO0_500  |       3.300 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| VCCO_PSIO1_501  |       3.300 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| VCCO_PSIO2_502  |       3.300 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| VCCO_PSIO3_503  |       3.300 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| VCC_PSADC       |       1.800 |     0.002 |       0.000 |      0.002 |       NA    | Unspecified | NA         |
+| MGTAVcc         |       0.900 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| MGTAVtt         |       1.200 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| MGTVccaux       |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
++-----------------+-------------+-----------+-------------+------------+-------------+-------------+------------+
+
+
+1.3 Confidence Level
+--------------------
+
++-----------------------------+------------+--------------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+| User Input Data             | Confidence | Details                                                | Action                                                                                                     |
++-----------------------------+------------+--------------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+| Design implementation state | Low        | Design is synthesized                                  | Accuracy of the tool is not optimal until design is fully placed and routed                                |
+| Clock nodes activity        | High       | User specified more than 95% of clocks                 |                                                                                                            |
+| I/O nodes activity          | Low        | More than 75% of inputs are missing user specification | Provide missing input activity with simulation results or by editing the "By Resource Type -> I/Os" view   |
+| Internal nodes activity     | Medium     | User specified less than 25% of internal nodes         | Provide missing internal nodes activity with simulation results or by editing the "By Resource Type" views |
+| Device models               | High       | Device models are Production                           |                                                                                                            |
+|                             |            |                                                        |                                                                                                            |
+| Overall confidence level    | Low        |                                                        |                                                                                                            |
++-----------------------------+------------+--------------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+
+
+2. Settings
+-----------
+
+2.1 Environment
+---------------
+
++-----------------------+--------------------------+
+| Ambient Temp (C)      | 25.0                     |
+| ThetaJA (C/W)         | 1.0                      |
+| Airflow (LFM)         | 250                      |
+| Heat Sink             | medium (Medium Profile)  |
+| ThetaSA (C/W)         | 1.5                      |
+| Board Selection       | medium (10"x10")         |
+| # of Board Layers     | 12to15 (12 to 15 Layers) |
+| Board Temperature (C) | 25.0                     |
++-----------------------+--------------------------+
+
+
+2.2 Clock Constraints
+---------------------
+
++-------+--------+-----------------+
+| Clock | Domain | Constraint (ns) |
++-------+--------+-----------------+
+| Clk   | Clock  |             8.0 |
++-------+--------+-----------------+
+
+
+3. Detailed Reports
+-------------------
+
+3.1 By Hierarchy
+----------------
+
++-------------------------+-----------+
+| Name                    | Power (W) |
++-------------------------+-----------+
+| FP                      |     4.460 |
+|   ADDER_SP_0            |     0.004 |
+|   ADDER_SP_1            |     0.005 |
+|   EXP_ADD[10].ADDER0    |     0.009 |
+|   EXP_ADD[10].ADDER1    |     0.009 |
+|   EXP_ADD[10].ADDER2    |     0.009 |
+|   EXP_ADD[10].EXPONENT0 |     0.001 |
+|   EXP_ADD[10].EXPONENT1 |     0.001 |
+|   EXP_ADD[10].EXPONENT2 |     0.001 |
+|   EXP_ADD[11].ADDER0    |     0.009 |
+|   EXP_ADD[11].ADDER1    |     0.009 |
+|   EXP_ADD[11].ADDER2    |     0.009 |
+|   EXP_ADD[11].EXPONENT0 |     0.001 |
+|   EXP_ADD[11].EXPONENT1 |     0.001 |
+|   EXP_ADD[11].EXPONENT2 |     0.001 |
+|   EXP_ADD[12].ADDER0    |     0.009 |
+|   EXP_ADD[12].ADDER1    |     0.009 |
+|   EXP_ADD[12].ADDER2    |     0.009 |
+|   EXP_ADD[12].EXPONENT0 |     0.001 |
+|   EXP_ADD[12].EXPONENT1 |     0.001 |
+|   EXP_ADD[12].EXPONENT2 |     0.001 |
+|   EXP_ADD[13].ADDER0    |     0.009 |
+|   EXP_ADD[13].ADDER1    |     0.009 |
+|   EXP_ADD[13].ADDER2    |     0.009 |
+|   EXP_ADD[13].EXPONENT0 |     0.001 |
+|   EXP_ADD[13].EXPONENT1 |     0.001 |
+|   EXP_ADD[13].EXPONENT2 |     0.001 |
+|   EXP_ADD[14].ADDER0    |     0.009 |
+|   EXP_ADD[14].ADDER1    |     0.009 |
+|   EXP_ADD[14].ADDER2    |     0.009 |
+|   EXP_ADD[14].EXPONENT0 |     0.001 |
+|   EXP_ADD[14].EXPONENT1 |     0.001 |
+|   EXP_ADD[14].EXPONENT2 |     0.001 |
+|   EXP_ADD[15].ADDER0    |     0.009 |
+|   EXP_ADD[15].ADDER1    |     0.009 |
+|   EXP_ADD[15].ADDER2    |     0.009 |
+|   EXP_ADD[15].EXPONENT0 |     0.001 |
+|   EXP_ADD[15].EXPONENT1 |     0.001 |
+|   EXP_ADD[15].EXPONENT2 |     0.001 |
+|   EXP_ADD[16].ADDER0    |     0.009 |
+|   EXP_ADD[16].ADDER1    |     0.009 |
+|   EXP_ADD[16].ADDER2    |     0.009 |
+|   EXP_ADD[16].EXPONENT0 |     0.001 |
+|   EXP_ADD[16].EXPONENT1 |     0.001 |
+|   EXP_ADD[16].EXPONENT2 |     0.001 |
+|   EXP_ADD[17].ADDER0    |     0.009 |
+|   EXP_ADD[17].ADDER1    |     0.009 |
+|   EXP_ADD[17].ADDER2    |     0.009 |
+|   EXP_ADD[17].EXPONENT0 |     0.001 |
+|   EXP_ADD[17].EXPONENT1 |     0.001 |
+|   EXP_ADD[17].EXPONENT2 |     0.001 |
+|   EXP_ADD[18].ADDER0    |     0.009 |
+|   EXP_ADD[18].ADDER1    |     0.009 |
+|   EXP_ADD[18].ADDER2    |     0.009 |
+|   EXP_ADD[18].EXPONENT0 |     0.001 |
+|   EXP_ADD[18].EXPONENT1 |     0.001 |
+|   EXP_ADD[18].EXPONENT2 |     0.001 |
+|   EXP_ADD[19].ADDER0    |     0.009 |
+|   EXP_ADD[19].ADDER1    |     0.009 |
+|   EXP_ADD[19].ADDER2    |     0.009 |
+|   EXP_ADD[19].EXPONENT0 |     0.001 |
+|   EXP_ADD[19].EXPONENT1 |     0.001 |
+|   EXP_ADD[19].EXPONENT2 |     0.001 |
+|   EXP_ADD[1].ADDER0     |     0.008 |
+|   EXP_ADD[1].ADDER1     |     0.008 |
+|   EXP_ADD[1].ADDER2     |     0.008 |
+|   EXP_ADD[1].EXPONENT0  |     0.001 |
+|   EXP_ADD[20].ADDER0    |     0.009 |
+|   EXP_ADD[20].ADDER1    |     0.009 |
+|   EXP_ADD[20].ADDER2    |     0.009 |
+|   EXP_ADD[20].EXPONENT0 |     0.001 |
+|   EXP_ADD[20].EXPONENT1 |     0.001 |
+|   EXP_ADD[20].EXPONENT2 |     0.001 |
+|   EXP_ADD[21].ADDER0    |     0.009 |
+|   EXP_ADD[21].ADDER1    |     0.009 |
+|   EXP_ADD[21].ADDER2    |     0.009 |
+|   EXP_ADD[21].EXPONENT0 |     0.001 |
+|   EXP_ADD[21].EXPONENT1 |     0.001 |
+|   EXP_ADD[21].EXPONENT2 |     0.001 |
+|   EXP_ADD[22].ADDER0    |     0.009 |
+|   EXP_ADD[22].ADDER1    |     0.009 |
+|   EXP_ADD[22].ADDER2    |     0.009 |
+|   EXP_ADD[22].EXPONENT0 |     0.001 |
+|   EXP_ADD[22].EXPONENT1 |     0.001 |
+|   EXP_ADD[22].EXPONENT2 |     0.001 |
+|   EXP_ADD[23].ADDER0    |     0.009 |
+|   EXP_ADD[23].ADDER1    |     0.009 |
+|   EXP_ADD[23].ADDER2    |     0.009 |
+|   EXP_ADD[23].EXPONENT0 |     0.001 |
+|   EXP_ADD[23].EXPONENT1 |     0.001 |
+|   EXP_ADD[23].EXPONENT2 |     0.001 |
+|   EXP_ADD[24].ADDER0    |     0.009 |
+|   EXP_ADD[24].ADDER1    |     0.009 |
+|   EXP_ADD[24].ADDER2    |     0.009 |
+|   EXP_ADD[24].EXPONENT0 |     0.001 |
+|   EXP_ADD[24].EXPONENT1 |     0.001 |
+|   EXP_ADD[24].EXPONENT2 |     0.001 |
+|   EXP_ADD[25].ADDER0    |     0.009 |
+|   EXP_ADD[25].ADDER1    |     0.009 |
+|   EXP_ADD[25].ADDER2    |     0.009 |
+|   EXP_ADD[25].EXPONENT0 |     0.001 |
+|   EXP_ADD[25].EXPONENT1 |     0.001 |
+|   EXP_ADD[25].EXPONENT2 |     0.001 |
+|   EXP_ADD[26].ADDER0    |     0.009 |
+|   EXP_ADD[26].ADDER1    |     0.009 |
+|   EXP_ADD[26].ADDER2    |     0.009 |
+|   EXP_ADD[26].EXPONENT0 |     0.001 |
+|   EXP_ADD[26].EXPONENT1 |     0.001 |
+|   EXP_ADD[26].EXPONENT2 |     0.001 |
+|   EXP_ADD[27].ADDER0    |     0.009 |
+|   EXP_ADD[27].ADDER1    |     0.009 |
+|   EXP_ADD[27].ADDER2    |     0.009 |
+|   EXP_ADD[27].EXPONENT0 |     0.001 |
+|   EXP_ADD[27].EXPONENT1 |     0.001 |
+|   EXP_ADD[27].EXPONENT2 |     0.001 |
+|   EXP_ADD[28].ADDER0    |     0.009 |
+|   EXP_ADD[28].ADDER1    |     0.009 |
+|   EXP_ADD[28].ADDER2    |     0.009 |
+|   EXP_ADD[28].EXPONENT0 |     0.001 |
+|   EXP_ADD[28].EXPONENT1 |     0.001 |
+|   EXP_ADD[28].EXPONENT2 |     0.001 |
+|   EXP_ADD[29].ADDER0    |     0.009 |
+|   EXP_ADD[29].ADDER1    |     0.009 |
+|   EXP_ADD[29].ADDER2    |     0.009 |
+|   EXP_ADD[29].EXPONENT0 |     0.001 |
+|   EXP_ADD[29].EXPONENT1 |     0.001 |
+|   EXP_ADD[29].EXPONENT2 |     0.001 |
+|   EXP_ADD[2].ADDER0     |     0.009 |
+|   EXP_ADD[2].ADDER1     |     0.009 |
+|   EXP_ADD[2].ADDER2     |     0.009 |
+|   EXP_ADD[2].EXPONENT0  |     0.001 |
+|   EXP_ADD[30].ADDER0    |     0.009 |
+|   EXP_ADD[30].ADDER1    |     0.009 |
+|   EXP_ADD[30].ADDER2    |     0.009 |
+|   EXP_ADD[30].EXPONENT0 |     0.001 |
+|   EXP_ADD[30].EXPONENT1 |     0.001 |
+|   EXP_ADD[30].EXPONENT2 |     0.001 |
+|   EXP_ADD[31].ADDER0    |     0.009 |
+|   EXP_ADD[31].ADDER1    |     0.009 |
+|   EXP_ADD[31].ADDER2    |     0.009 |
+|   EXP_ADD[31].EXPONENT0 |     0.001 |
+|   EXP_ADD[31].EXPONENT1 |     0.001 |
+|   EXP_ADD[31].EXPONENT2 |     0.001 |
+|   EXP_ADD[32].ADDER0    |     0.009 |
+|   EXP_ADD[32].ADDER1    |     0.009 |
+|   EXP_ADD[32].ADDER2    |     0.009 |
+|   EXP_ADD[32].EXPONENT0 |     0.001 |
+|   EXP_ADD[32].EXPONENT1 |     0.001 |
+|   EXP_ADD[32].EXPONENT2 |     0.001 |
+|   EXP_ADD[33].ADDER0    |     0.009 |
+|   EXP_ADD[33].ADDER1    |     0.009 |
+|   EXP_ADD[33].ADDER2    |     0.009 |
+|   EXP_ADD[33].EXPONENT0 |     0.001 |
+|   EXP_ADD[33].EXPONENT1 |     0.001 |
+|   EXP_ADD[33].EXPONENT2 |     0.001 |
+|   EXP_ADD[34].ADDER0    |     0.009 |
+|   EXP_ADD[34].ADDER1    |     0.009 |
+|   EXP_ADD[34].ADDER2    |     0.009 |
+|   EXP_ADD[34].EXPONENT0 |     0.001 |
+|   EXP_ADD[34].EXPONENT1 |     0.001 |
+|   EXP_ADD[34].EXPONENT2 |     0.001 |
+|   EXP_ADD[35].ADDER0    |     0.009 |
+|   EXP_ADD[35].ADDER1    |     0.009 |
+|   EXP_ADD[35].ADDER2    |     0.009 |
+|   EXP_ADD[35].EXPONENT0 |     0.001 |
+|   EXP_ADD[35].EXPONENT1 |     0.001 |
+|   EXP_ADD[35].EXPONENT2 |     0.001 |
+|   EXP_ADD[36].ADDER0    |     0.009 |
+|   EXP_ADD[36].ADDER1    |     0.009 |
+|   EXP_ADD[36].ADDER2    |     0.009 |
+|   EXP_ADD[36].EXPONENT0 |     0.001 |
+|   EXP_ADD[36].EXPONENT1 |     0.001 |
+|   EXP_ADD[36].EXPONENT2 |     0.001 |
+|   EXP_ADD[37].ADDER0    |     0.009 |
+|   EXP_ADD[37].ADDER1    |     0.009 |
+|   EXP_ADD[37].ADDER2    |     0.009 |
+|   EXP_ADD[37].EXPONENT0 |     0.001 |
+|   EXP_ADD[37].EXPONENT1 |     0.001 |
+|   EXP_ADD[37].EXPONENT2 |     0.001 |
+|   EXP_ADD[38].ADDER0    |     0.009 |
+|   EXP_ADD[38].ADDER1    |     0.009 |
+|   EXP_ADD[38].ADDER2    |     0.009 |
+|   EXP_ADD[38].EXPONENT0 |     0.001 |
+|   EXP_ADD[38].EXPONENT1 |     0.001 |
+|   EXP_ADD[38].EXPONENT2 |     0.001 |
+|   EXP_ADD[39].ADDER0    |     0.009 |
+|   EXP_ADD[39].ADDER1    |     0.009 |
+|   EXP_ADD[39].ADDER2    |     0.009 |
+|   EXP_ADD[39].EXPONENT0 |     0.001 |
+|   EXP_ADD[39].EXPONENT1 |     0.001 |
+|   EXP_ADD[39].EXPONENT2 |     0.001 |
+|   EXP_ADD[3].ADDER0     |     0.009 |
+|   EXP_ADD[3].ADDER1     |     0.009 |
+|   EXP_ADD[3].ADDER2     |     0.009 |
+|   EXP_ADD[3].EXPONENT0  |     0.001 |
+|   EXP_ADD[40].ADDER0    |     0.009 |
+|   EXP_ADD[40].ADDER1    |     0.009 |
+|   EXP_ADD[40].ADDER2    |     0.009 |
+|   EXP_ADD[40].EXPONENT0 |     0.001 |
+|   EXP_ADD[40].EXPONENT1 |     0.001 |
+|   EXP_ADD[40].EXPONENT2 |     0.001 |
+|   EXP_ADD[41].ADDER0    |     0.009 |
+|   EXP_ADD[41].ADDER1    |     0.009 |
+|   EXP_ADD[41].ADDER2    |     0.009 |
+|   EXP_ADD[41].EXPONENT0 |     0.001 |
+|   EXP_ADD[41].EXPONENT1 |     0.001 |
+|   EXP_ADD[41].EXPONENT2 |     0.001 |
+|   EXP_ADD[42].ADDER0    |     0.009 |
+|   EXP_ADD[42].ADDER1    |     0.009 |
+|   EXP_ADD[42].ADDER2    |     0.009 |
+|   EXP_ADD[42].EXPONENT0 |     0.001 |
+|   EXP_ADD[42].EXPONENT1 |     0.001 |
+|   EXP_ADD[42].EXPONENT2 |     0.001 |
+|   EXP_ADD[43].ADDER0    |     0.009 |
+|   EXP_ADD[43].ADDER1    |     0.009 |
+|   EXP_ADD[43].ADDER2    |     0.009 |
+|   EXP_ADD[43].EXPONENT0 |     0.001 |
+|   EXP_ADD[43].EXPONENT1 |     0.001 |
+|   EXP_ADD[43].EXPONENT2 |     0.001 |
+|   EXP_ADD[44].ADDER0    |     0.009 |
+|   EXP_ADD[44].ADDER1    |     0.009 |
+|   EXP_ADD[44].ADDER2    |     0.009 |
+|   EXP_ADD[44].EXPONENT0 |     0.001 |
+|   EXP_ADD[44].EXPONENT1 |     0.001 |
+|   EXP_ADD[44].EXPONENT2 |     0.001 |
+|   EXP_ADD[45].ADDER0    |     0.009 |
+|   EXP_ADD[45].ADDER1    |     0.009 |
+|   EXP_ADD[45].ADDER2    |     0.009 |
+|   EXP_ADD[45].EXPONENT0 |     0.001 |
+|   EXP_ADD[45].EXPONENT1 |     0.001 |
+|   EXP_ADD[45].EXPONENT2 |     0.001 |
+|   EXP_ADD[46].ADDER0    |     0.009 |
+|   EXP_ADD[46].ADDER1    |     0.009 |
+|   EXP_ADD[46].ADDER2    |     0.009 |
+|   EXP_ADD[46].EXPONENT0 |     0.001 |
+|   EXP_ADD[46].EXPONENT1 |     0.001 |
+|   EXP_ADD[46].EXPONENT2 |     0.001 |
+|   EXP_ADD[47].ADDER0    |     0.009 |
+|   EXP_ADD[47].ADDER1    |     0.009 |
+|   EXP_ADD[47].ADDER2    |     0.009 |
+|   EXP_ADD[47].EXPONENT0 |     0.001 |
+|   EXP_ADD[47].EXPONENT1 |     0.001 |
+|   EXP_ADD[47].EXPONENT2 |     0.001 |
+|   EXP_ADD[48].ADDER0    |     0.009 |
+|   EXP_ADD[48].ADDER1    |     0.009 |
+|   EXP_ADD[48].ADDER2    |     0.009 |
+|   EXP_ADD[48].EXPONENT0 |     0.001 |
+|   EXP_ADD[48].EXPONENT1 |     0.001 |
+|   EXP_ADD[48].EXPONENT2 |     0.001 |
+|   EXP_ADD[49].ADDER0    |     0.009 |
+|   EXP_ADD[49].ADDER1    |     0.009 |
+|   EXP_ADD[49].ADDER2    |     0.009 |
+|   EXP_ADD[49].EXPONENT0 |     0.001 |
+|   EXP_ADD[49].EXPONENT1 |     0.001 |
+|   EXP_ADD[49].EXPONENT2 |     0.001 |
+|   EXP_ADD[4].ADDER0     |     0.009 |
+|   EXP_ADD[4].ADDER1     |     0.009 |
+|   EXP_ADD[4].ADDER2     |     0.009 |
+|   EXP_ADD[4].EXPONENT0  |     0.001 |
+|   EXP_ADD[4].EXPONENT1  |     0.001 |
+|   EXP_ADD[50].ADDER0    |     0.009 |
+|   EXP_ADD[50].ADDER1    |     0.009 |
+|   EXP_ADD[50].ADDER2    |     0.009 |
+|   EXP_ADD[50].EXPONENT0 |     0.001 |
+|   EXP_ADD[50].EXPONENT1 |     0.001 |
+|   EXP_ADD[50].EXPONENT2 |     0.001 |
+|   EXP_ADD[51].ADDER0    |     0.009 |
+|   EXP_ADD[51].ADDER1    |     0.009 |
+|   EXP_ADD[51].ADDER2    |     0.009 |
+|   EXP_ADD[51].EXPONENT0 |     0.001 |
+|   EXP_ADD[51].EXPONENT1 |     0.001 |
+|   EXP_ADD[51].EXPONENT2 |     0.001 |
+|   EXP_ADD[52].ADDER0    |     0.009 |
+|   EXP_ADD[52].ADDER1    |     0.009 |
+|   EXP_ADD[52].ADDER2    |     0.009 |
+|   EXP_ADD[52].EXPONENT0 |     0.001 |
+|   EXP_ADD[52].EXPONENT1 |     0.001 |
+|   EXP_ADD[52].EXPONENT2 |     0.001 |
+|   EXP_ADD[53].ADDER0    |     0.009 |
+|   EXP_ADD[53].ADDER1    |     0.009 |
+|   EXP_ADD[53].ADDER2    |     0.009 |
+|   EXP_ADD[53].EXPONENT0 |     0.001 |
+|   EXP_ADD[53].EXPONENT1 |     0.001 |
+|   EXP_ADD[53].EXPONENT2 |     0.001 |
+|   EXP_ADD[54].ADDER0    |     0.009 |
+|   EXP_ADD[54].ADDER1    |     0.009 |
+|   EXP_ADD[54].ADDER2    |     0.009 |
+|   EXP_ADD[54].EXPONENT0 |     0.001 |
+|   EXP_ADD[54].EXPONENT1 |     0.001 |
+|   EXP_ADD[54].EXPONENT2 |     0.001 |
+|   EXP_ADD[55].ADDER0    |     0.009 |
+|   EXP_ADD[55].ADDER1    |     0.009 |
+|   EXP_ADD[55].ADDER2    |     0.009 |
+|   EXP_ADD[55].EXPONENT0 |     0.001 |
+|   EXP_ADD[55].EXPONENT1 |     0.001 |
+|   EXP_ADD[55].EXPONENT2 |     0.001 |
+|   EXP_ADD[56].ADDER0    |     0.009 |
+|   EXP_ADD[56].ADDER1    |     0.009 |
+|   EXP_ADD[56].ADDER2    |     0.009 |
+|   EXP_ADD[56].EXPONENT0 |     0.001 |
+|   EXP_ADD[56].EXPONENT1 |     0.001 |
+|   EXP_ADD[56].EXPONENT2 |     0.001 |
+|   EXP_ADD[57].ADDER0    |     0.009 |
+|   EXP_ADD[57].ADDER1    |     0.009 |
+|   EXP_ADD[57].ADDER2    |     0.009 |
+|   EXP_ADD[57].EXPONENT0 |     0.001 |
+|   EXP_ADD[57].EXPONENT1 |     0.001 |
+|   EXP_ADD[57].EXPONENT2 |     0.001 |
+|   EXP_ADD[58].ADDER0    |     0.009 |
+|   EXP_ADD[58].ADDER1    |     0.009 |
+|   EXP_ADD[58].ADDER2    |     0.009 |
+|   EXP_ADD[58].EXPONENT0 |     0.001 |
+|   EXP_ADD[58].EXPONENT1 |     0.001 |
+|   EXP_ADD[58].EXPONENT2 |     0.001 |
+|   EXP_ADD[59].ADDER0    |     0.009 |
+|   EXP_ADD[59].ADDER1    |     0.009 |
+|   EXP_ADD[59].ADDER2    |     0.009 |
+|   EXP_ADD[59].EXPONENT0 |     0.001 |
+|   EXP_ADD[59].EXPONENT1 |     0.001 |
+|   EXP_ADD[59].EXPONENT2 |     0.001 |
+|   EXP_ADD[5].ADDER0     |     0.009 |
+|   EXP_ADD[5].ADDER1     |     0.009 |
+|   EXP_ADD[5].ADDER2     |     0.009 |
+|   EXP_ADD[5].EXPONENT0  |     0.001 |
+|   EXP_ADD[5].EXPONENT1  |     0.001 |
+|   EXP_ADD[5].EXPONENT2  |     0.001 |
+|   EXP_ADD[60].ADDER0    |     0.009 |
+|   EXP_ADD[60].ADDER1    |     0.009 |
+|   EXP_ADD[60].ADDER2    |     0.009 |
+|   EXP_ADD[60].EXPONENT0 |     0.001 |
+|   EXP_ADD[60].EXPONENT1 |     0.001 |
+|   EXP_ADD[60].EXPONENT2 |     0.001 |
+|   EXP_ADD[61].ADDER0    |     0.009 |
+|   EXP_ADD[61].ADDER1    |     0.009 |
+|   EXP_ADD[61].ADDER2    |     0.009 |
+|   EXP_ADD[61].EXPONENT0 |     0.001 |
+|   EXP_ADD[61].EXPONENT1 |     0.001 |
+|   EXP_ADD[61].EXPONENT2 |     0.001 |
+|   EXP_ADD[62].ADDER0    |     0.009 |
+|   EXP_ADD[62].ADDER1    |     0.009 |
+|   EXP_ADD[62].ADDER2    |     0.009 |
+|   EXP_ADD[62].EXPONENT0 |     0.001 |
+|   EXP_ADD[62].EXPONENT1 |     0.001 |
+|   EXP_ADD[62].EXPONENT2 |     0.001 |
+|   EXP_ADD[63].ADDER0    |     0.009 |
+|   EXP_ADD[63].ADDER1    |     0.009 |
+|   EXP_ADD[63].ADDER2    |     0.009 |
+|   EXP_ADD[63].EXPONENT0 |     0.001 |
+|   EXP_ADD[63].EXPONENT1 |     0.001 |
+|   EXP_ADD[63].EXPONENT2 |     0.001 |
+|   EXP_ADD[64].ADDER0    |     0.009 |
+|   EXP_ADD[64].ADDER1    |     0.009 |
+|   EXP_ADD[64].ADDER2    |     0.009 |
+|   EXP_ADD[64].EXPONENT0 |     0.001 |
+|   EXP_ADD[64].EXPONENT1 |     0.001 |
+|   EXP_ADD[64].EXPONENT2 |     0.001 |
+|   EXP_ADD[65].ADDER0    |     0.009 |
+|   EXP_ADD[65].ADDER1    |     0.009 |
+|   EXP_ADD[65].ADDER2    |     0.009 |
+|   EXP_ADD[65].EXPONENT0 |     0.001 |
+|   EXP_ADD[65].EXPONENT1 |     0.001 |
+|   EXP_ADD[65].EXPONENT2 |     0.001 |
+|   EXP_ADD[66].ADDER0    |     0.009 |
+|   EXP_ADD[66].ADDER1    |     0.009 |
+|   EXP_ADD[66].ADDER2    |     0.009 |
+|   EXP_ADD[66].EXPONENT0 |     0.001 |
+|   EXP_ADD[66].EXPONENT1 |     0.001 |
+|   EXP_ADD[66].EXPONENT2 |     0.001 |
+|   EXP_ADD[67].ADDER0    |     0.009 |
+|   EXP_ADD[67].ADDER1    |     0.009 |
+|   EXP_ADD[67].ADDER2    |     0.009 |
+|   EXP_ADD[67].EXPONENT0 |     0.001 |
+|   EXP_ADD[67].EXPONENT1 |     0.001 |
+|   EXP_ADD[67].EXPONENT2 |     0.001 |
+|   EXP_ADD[68].ADDER0    |     0.009 |
+|   EXP_ADD[68].ADDER1    |     0.009 |
+|   EXP_ADD[68].ADDER2    |     0.009 |
+|   EXP_ADD[68].EXPONENT0 |     0.002 |
+|   EXP_ADD[68].EXPONENT1 |     0.001 |
+|   EXP_ADD[68].EXPONENT2 |     0.001 |
+|   EXP_ADD[69].ADDER0    |     0.010 |
+|   EXP_ADD[69].ADDER1    |     0.010 |
+|   EXP_ADD[69].ADDER2    |     0.009 |
+|   EXP_ADD[69].EXPONENT0 |     0.002 |
+|   EXP_ADD[69].EXPONENT1 |     0.001 |
+|   EXP_ADD[69].EXPONENT2 |     0.001 |
+|   EXP_ADD[6].ADDER0     |     0.009 |
+|   EXP_ADD[6].ADDER1     |     0.009 |
+|   EXP_ADD[6].ADDER2     |     0.009 |
+|   EXP_ADD[6].EXPONENT0  |     0.001 |
+|   EXP_ADD[6].EXPONENT1  |     0.001 |
+|   EXP_ADD[6].EXPONENT2  |     0.001 |
+|   EXP_ADD[7].ADDER0     |     0.009 |
+|   EXP_ADD[7].ADDER1     |     0.009 |
+|   EXP_ADD[7].ADDER2     |     0.009 |
+|   EXP_ADD[7].EXPONENT0  |     0.001 |
+|   EXP_ADD[7].EXPONENT1  |     0.001 |
+|   EXP_ADD[7].EXPONENT2  |     0.001 |
+|   EXP_ADD[8].ADDER0     |     0.009 |
+|   EXP_ADD[8].ADDER1     |     0.009 |
+|   EXP_ADD[8].ADDER2     |     0.009 |
+|   EXP_ADD[8].EXPONENT0  |     0.001 |
+|   EXP_ADD[8].EXPONENT1  |     0.001 |
+|   EXP_ADD[8].EXPONENT2  |     0.001 |
+|   EXP_ADD[9].ADDER0     |     0.009 |
+|   EXP_ADD[9].ADDER1     |     0.009 |
+|   EXP_ADD[9].ADDER2     |     0.009 |
+|   EXP_ADD[9].EXPONENT0  |     0.001 |
+|   EXP_ADD[9].EXPONENT1  |     0.001 |
+|   EXP_ADD[9].EXPONENT2  |     0.001 |
+|   LAYER[0].INPUT0       |     0.004 |
+|   LAYER[0].PE00         |     0.002 |
+|   LAYER[0].PE01         |     0.002 |
+|   LAYER[0].PE02         |     0.001 |
+|   LAYER[0].PE10         |     0.003 |
+|   LAYER[0].PE11         |     0.003 |
+|   LAYER[0].PE12         |     0.003 |
+|   LAYER[0].PE20         |     0.004 |
+|   LAYER[0].PE21         |     0.004 |
+|   LAYER[0].PE22         |     0.004 |
+|   LAYER[10].INPUT0      |     0.004 |
+|   LAYER[10].PE00        |     0.002 |
+|   LAYER[10].PE01        |     0.002 |
+|   LAYER[10].PE02        |     0.001 |
+|   LAYER[10].PE10        |     0.003 |
+|   LAYER[10].PE11        |     0.003 |
+|   LAYER[10].PE12        |     0.003 |
+|   LAYER[10].PE20        |     0.004 |
+|   LAYER[10].PE21        |     0.004 |
+|   LAYER[10].PE22        |     0.004 |
+|   LAYER[11].INPUT0      |     0.004 |
+|   LAYER[11].PE00        |     0.002 |
+|   LAYER[11].PE01        |     0.002 |
+|   LAYER[11].PE02        |     0.001 |
+|   LAYER[11].PE10        |     0.003 |
+|   LAYER[11].PE11        |     0.003 |
+|   LAYER[11].PE12        |     0.003 |
+|   LAYER[11].PE20        |     0.004 |
+|   LAYER[11].PE21        |     0.004 |
+|   LAYER[11].PE22        |     0.004 |
+|   LAYER[12].INPUT0      |     0.004 |
+|   LAYER[12].PE00        |     0.002 |
+|   LAYER[12].PE01        |     0.002 |
+|   LAYER[12].PE02        |     0.001 |
+|   LAYER[12].PE10        |     0.003 |
+|   LAYER[12].PE11        |     0.003 |
+|   LAYER[12].PE12        |     0.003 |
+|   LAYER[12].PE20        |     0.004 |
+|   LAYER[12].PE21        |     0.004 |
+|   LAYER[12].PE22        |     0.004 |
+|   LAYER[13].INPUT0      |     0.004 |
+|   LAYER[13].PE00        |     0.002 |
+|   LAYER[13].PE01        |     0.002 |
+|   LAYER[13].PE02        |     0.001 |
+|   LAYER[13].PE10        |     0.003 |
+|   LAYER[13].PE11        |     0.003 |
+|   LAYER[13].PE12        |     0.003 |
+|   LAYER[13].PE20        |     0.004 |
+|   LAYER[13].PE21        |     0.004 |
+|   LAYER[13].PE22        |     0.004 |
+|   LAYER[14].INPUT0      |     0.004 |
+|   LAYER[14].PE00        |     0.002 |
+|   LAYER[14].PE01        |     0.002 |
+|   LAYER[14].PE02        |     0.001 |
+|   LAYER[14].PE10        |     0.003 |
+|   LAYER[14].PE11        |     0.003 |
+|   LAYER[14].PE12        |     0.003 |
+|   LAYER[14].PE20        |     0.004 |
+|   LAYER[14].PE21        |     0.004 |
+|   LAYER[14].PE22        |     0.004 |
+|   LAYER[15].INPUT0      |     0.004 |
+|   LAYER[15].PE00        |     0.002 |
+|   LAYER[15].PE01        |     0.002 |
+|   LAYER[15].PE02        |     0.001 |
+|   LAYER[15].PE10        |     0.003 |
+|   LAYER[15].PE11        |     0.003 |
+|   LAYER[15].PE12        |     0.003 |
+|   LAYER[15].PE20        |     0.004 |
+|   LAYER[15].PE21        |     0.004 |
+|   LAYER[15].PE22        |     0.004 |
+|   LAYER[16].INPUT0      |     0.004 |
+|   LAYER[16].PE00        |     0.002 |
+|   LAYER[16].PE01        |     0.002 |
+|   LAYER[16].PE02        |     0.001 |
+|   LAYER[16].PE10        |     0.003 |
+|   LAYER[16].PE11        |     0.003 |
+|   LAYER[16].PE12        |     0.003 |
+|   LAYER[16].PE20        |     0.004 |
+|   LAYER[16].PE21        |     0.004 |
+|   LAYER[16].PE22        |     0.004 |
+|   LAYER[17].INPUT0      |     0.004 |
+|   LAYER[17].PE00        |     0.002 |
+|   LAYER[17].PE01        |     0.002 |
+|   LAYER[17].PE02        |     0.001 |
+|   LAYER[17].PE10        |     0.003 |
+|   LAYER[17].PE11        |     0.003 |
+|   LAYER[17].PE12        |     0.003 |
+|   LAYER[17].PE20        |     0.004 |
+|   LAYER[17].PE21        |     0.004 |
+|   LAYER[17].PE22        |     0.004 |
+|   LAYER[18].INPUT0      |     0.004 |
+|   LAYER[18].PE00        |     0.002 |
+|   LAYER[18].PE01        |     0.002 |
+|   LAYER[18].PE02        |     0.001 |
+|   LAYER[18].PE10        |     0.003 |
+|   LAYER[18].PE11        |     0.003 |
+|   LAYER[18].PE12        |     0.003 |
+|   LAYER[18].PE20        |     0.004 |
+|   LAYER[18].PE21        |     0.004 |
+|   LAYER[18].PE22        |     0.004 |
+|   LAYER[19].INPUT0      |     0.004 |
+|   LAYER[19].PE00        |     0.002 |
+|   LAYER[19].PE01        |     0.002 |
+|   LAYER[19].PE02        |     0.001 |
+|   LAYER[19].PE10        |     0.003 |
+|   LAYER[19].PE11        |     0.003 |
+|   LAYER[19].PE12        |     0.003 |
+|   LAYER[19].PE20        |     0.004 |
+|   LAYER[19].PE21        |     0.004 |
+|   LAYER[19].PE22        |     0.004 |
+|   LAYER[1].INPUT0       |     0.004 |
+|   LAYER[1].PE00         |     0.002 |
+|   LAYER[1].PE01         |     0.002 |
+|   LAYER[1].PE02         |     0.001 |
+|   LAYER[1].PE10         |     0.003 |
+|   LAYER[1].PE11         |     0.003 |
+|   LAYER[1].PE12         |     0.003 |
+|   LAYER[1].PE20         |     0.004 |
+|   LAYER[1].PE21         |     0.004 |
+|   LAYER[1].PE22         |     0.004 |
+|   LAYER[20].INPUT0      |     0.004 |
+|   LAYER[20].PE00        |     0.002 |
+|   LAYER[20].PE01        |     0.002 |
+|   LAYER[20].PE02        |     0.001 |
+|   LAYER[20].PE10        |     0.003 |
+|   LAYER[20].PE11        |     0.003 |
+|   LAYER[20].PE12        |     0.003 |
+|   LAYER[20].PE20        |     0.004 |
+|   LAYER[20].PE21        |     0.004 |
+|   LAYER[20].PE22        |     0.004 |
+|   LAYER[21].INPUT0      |     0.004 |
+|   LAYER[21].PE00        |     0.002 |
+|   LAYER[21].PE01        |     0.002 |
+|   LAYER[21].PE02        |     0.001 |
+|   LAYER[21].PE10        |     0.003 |
+|   LAYER[21].PE11        |     0.003 |
+|   LAYER[21].PE12        |     0.003 |
+|   LAYER[21].PE20        |     0.004 |
+|   LAYER[21].PE21        |     0.004 |
+|   LAYER[21].PE22        |     0.004 |
+|   LAYER[22].INPUT0      |     0.004 |
+|   LAYER[22].PE00        |     0.002 |
+|   LAYER[22].PE01        |     0.002 |
+|   LAYER[22].PE02        |     0.001 |
+|   LAYER[22].PE10        |     0.003 |
+|   LAYER[22].PE11        |     0.003 |
+|   LAYER[22].PE12        |     0.003 |
+|   LAYER[22].PE20        |     0.004 |
+|   LAYER[22].PE21        |     0.004 |
+|   LAYER[22].PE22        |     0.004 |
+|   LAYER[23].INPUT0      |     0.004 |
+|   LAYER[23].PE00        |     0.002 |
+|   LAYER[23].PE01        |     0.002 |
+|   LAYER[23].PE02        |     0.001 |
+|   LAYER[23].PE10        |     0.003 |
+|   LAYER[23].PE11        |     0.003 |
+|   LAYER[23].PE12        |     0.003 |
+|   LAYER[23].PE20        |     0.004 |
+|   LAYER[23].PE21        |     0.004 |
+|   LAYER[23].PE22        |     0.004 |
+|   LAYER[24].INPUT0      |     0.004 |
+|   LAYER[24].PE00        |     0.002 |
+|   LAYER[24].PE01        |     0.002 |
+|   LAYER[24].PE02        |     0.001 |
+|   LAYER[24].PE10        |     0.003 |
+|   LAYER[24].PE11        |     0.003 |
+|   LAYER[24].PE12        |     0.003 |
+|   LAYER[24].PE20        |     0.004 |
+|   LAYER[24].PE21        |     0.004 |
+|   LAYER[24].PE22        |     0.004 |
+|   LAYER[25].INPUT0      |     0.004 |
+|   LAYER[25].PE00        |     0.002 |
+|   LAYER[25].PE01        |     0.002 |
+|   LAYER[25].PE02        |     0.001 |
+|   LAYER[25].PE10        |     0.003 |
+|   LAYER[25].PE11        |     0.003 |
+|   LAYER[25].PE12        |     0.003 |
+|   LAYER[25].PE20        |     0.004 |
+|   LAYER[25].PE21        |     0.004 |
+|   LAYER[25].PE22        |     0.004 |
+|   LAYER[26].INPUT0      |     0.004 |
+|   LAYER[26].PE00        |     0.002 |
+|   LAYER[26].PE01        |     0.002 |
+|   LAYER[26].PE02        |     0.001 |
+|   LAYER[26].PE10        |     0.003 |
+|   LAYER[26].PE11        |     0.003 |
+|   LAYER[26].PE12        |     0.003 |
+|   LAYER[26].PE20        |     0.004 |
+|   LAYER[26].PE21        |     0.004 |
+|   LAYER[26].PE22        |     0.004 |
+|   LAYER[27].INPUT0      |     0.004 |
+|   LAYER[27].PE00        |     0.002 |
+|   LAYER[27].PE01        |     0.002 |
+|   LAYER[27].PE02        |     0.001 |
+|   LAYER[27].PE10        |     0.003 |
+|   LAYER[27].PE11        |     0.003 |
+|   LAYER[27].PE12        |     0.003 |
+|   LAYER[27].PE20        |     0.004 |
+|   LAYER[27].PE21        |     0.004 |
+|   LAYER[27].PE22        |     0.004 |
+|   LAYER[28].INPUT0      |     0.004 |
+|   LAYER[28].PE00        |     0.002 |
+|   LAYER[28].PE01        |     0.002 |
+|   LAYER[28].PE02        |     0.001 |
+|   LAYER[28].PE10        |     0.003 |
+|   LAYER[28].PE11        |     0.003 |
+|   LAYER[28].PE12        |     0.003 |
+|   LAYER[28].PE20        |     0.004 |
+|   LAYER[28].PE21        |     0.004 |
+|   LAYER[28].PE22        |     0.004 |
+|   LAYER[29].INPUT0      |     0.004 |
+|   LAYER[29].PE00        |     0.002 |
+|   LAYER[29].PE01        |     0.002 |
+|   LAYER[29].PE02        |     0.001 |
+|   LAYER[29].PE10        |     0.003 |
+|   LAYER[29].PE11        |     0.003 |
+|   LAYER[29].PE12        |     0.003 |
+|   LAYER[29].PE20        |     0.004 |
+|   LAYER[29].PE21        |     0.004 |
+|   LAYER[29].PE22        |     0.004 |
+|   LAYER[2].INPUT0       |     0.004 |
+|   LAYER[2].PE00         |     0.002 |
+|   LAYER[2].PE01         |     0.002 |
+|   LAYER[2].PE02         |     0.001 |
+|   LAYER[2].PE10         |     0.003 |
+|   LAYER[2].PE11         |     0.003 |
+|   LAYER[2].PE12         |     0.003 |
+|   LAYER[2].PE20         |     0.004 |
+|   LAYER[2].PE21         |     0.004 |
+|   LAYER[2].PE22         |     0.004 |
+|   LAYER[30].INPUT0      |     0.004 |
+|   LAYER[30].PE00        |     0.002 |
+|   LAYER[30].PE01        |     0.002 |
+|   LAYER[30].PE02        |     0.001 |
+|   LAYER[30].PE10        |     0.003 |
+|   LAYER[30].PE11        |     0.003 |
+|   LAYER[30].PE12        |     0.003 |
+|   LAYER[30].PE20        |     0.004 |
+|   LAYER[30].PE21        |     0.004 |
+|   LAYER[30].PE22        |     0.004 |
+|   LAYER[31].INPUT0      |     0.004 |
+|   LAYER[31].PE00        |     0.002 |
+|   LAYER[31].PE01        |     0.002 |
+|   LAYER[31].PE02        |     0.001 |
+|   LAYER[31].PE10        |     0.003 |
+|   LAYER[31].PE11        |     0.003 |
+|   LAYER[31].PE12        |     0.003 |
+|   LAYER[31].PE20        |     0.004 |
+|   LAYER[31].PE21        |     0.004 |
+|   LAYER[31].PE22        |     0.004 |
+|   LAYER[32].INPUT0      |     0.004 |
+|   LAYER[32].PE00        |     0.002 |
+|   LAYER[32].PE01        |     0.002 |
+|   LAYER[32].PE02        |     0.001 |
+|   LAYER[32].PE10        |     0.003 |
+|   LAYER[32].PE11        |     0.003 |
+|   LAYER[32].PE12        |     0.003 |
+|   LAYER[32].PE20        |     0.004 |
+|   LAYER[32].PE21        |     0.004 |
+|   LAYER[32].PE22        |     0.004 |
+|   LAYER[33].INPUT0      |     0.004 |
+|   LAYER[33].PE00        |     0.002 |
+|   LAYER[33].PE01        |     0.002 |
+|   LAYER[33].PE02        |     0.001 |
+|   LAYER[33].PE10        |     0.003 |
+|   LAYER[33].PE11        |     0.003 |
+|   LAYER[33].PE12        |     0.003 |
+|   LAYER[33].PE20        |     0.004 |
+|   LAYER[33].PE21        |     0.004 |
+|   LAYER[33].PE22        |     0.004 |
+|   LAYER[34].INPUT0      |     0.004 |
+|   LAYER[34].PE00        |     0.002 |
+|   LAYER[34].PE01        |     0.002 |
+|   LAYER[34].PE02        |     0.001 |
+|   LAYER[34].PE10        |     0.003 |
+|   LAYER[34].PE11        |     0.003 |
+|   LAYER[34].PE12        |     0.003 |
+|   LAYER[34].PE20        |     0.004 |
+|   LAYER[34].PE21        |     0.004 |
+|   LAYER[34].PE22        |     0.004 |
+|   LAYER[35].INPUT0      |     0.004 |
+|   LAYER[35].PE00        |     0.002 |
+|   LAYER[35].PE01        |     0.002 |
+|   LAYER[35].PE02        |     0.001 |
+|   LAYER[35].PE10        |     0.003 |
+|   LAYER[35].PE11        |     0.003 |
+|   LAYER[35].PE12        |     0.003 |
+|   LAYER[35].PE20        |     0.004 |
+|   LAYER[35].PE21        |     0.004 |
+|   LAYER[35].PE22        |     0.004 |
+|   LAYER[36].INPUT0      |     0.004 |
+|   LAYER[36].PE00        |     0.002 |
+|   LAYER[36].PE01        |     0.002 |
+|   LAYER[36].PE02        |     0.001 |
+|   LAYER[36].PE10        |     0.003 |
+|   LAYER[36].PE11        |     0.003 |
+|   LAYER[36].PE12        |     0.003 |
+|   LAYER[36].PE20        |     0.004 |
+|   LAYER[36].PE21        |     0.004 |
+|   LAYER[36].PE22        |     0.004 |
+|   LAYER[37].INPUT0      |     0.004 |
+|   LAYER[37].PE00        |     0.002 |
+|   LAYER[37].PE01        |     0.002 |
+|   LAYER[37].PE02        |     0.001 |
+|   LAYER[37].PE10        |     0.003 |
+|   LAYER[37].PE11        |     0.003 |
+|   LAYER[37].PE12        |     0.003 |
+|   LAYER[37].PE20        |     0.004 |
+|   LAYER[37].PE21        |     0.004 |
+|   LAYER[37].PE22        |     0.004 |
+|   LAYER[38].INPUT0      |     0.004 |
+|   LAYER[38].PE00        |     0.002 |
+|   LAYER[38].PE01        |     0.002 |
+|   LAYER[38].PE02        |     0.001 |
+|   LAYER[38].PE10        |     0.003 |
+|   LAYER[38].PE11        |     0.003 |
+|   LAYER[38].PE12        |     0.003 |
+|   LAYER[38].PE20        |     0.004 |
+|   LAYER[38].PE21        |     0.004 |
+|   LAYER[38].PE22        |     0.004 |
+|   LAYER[39].INPUT0      |     0.004 |
+|   LAYER[39].PE00        |     0.002 |
+|   LAYER[39].PE01        |     0.002 |
+|   LAYER[39].PE02        |     0.001 |
+|   LAYER[39].PE10        |     0.003 |
+|   LAYER[39].PE11        |     0.003 |
+|   LAYER[39].PE12        |     0.003 |
+|   LAYER[39].PE20        |     0.004 |
+|   LAYER[39].PE21        |     0.004 |
+|   LAYER[39].PE22        |     0.004 |
+|   LAYER[3].INPUT0       |     0.004 |
+|   LAYER[3].PE00         |     0.002 |
+|   LAYER[3].PE01         |     0.002 |
+|   LAYER[3].PE02         |     0.001 |
+|   LAYER[3].PE10         |     0.003 |
+|   LAYER[3].PE11         |     0.003 |
+|   LAYER[3].PE12         |     0.003 |
+|   LAYER[3].PE20         |     0.004 |
+|   LAYER[3].PE21         |     0.004 |
+|   LAYER[3].PE22         |     0.004 |
+|   LAYER[40].INPUT0      |     0.005 |
+|   LAYER[40].PE00        |     0.002 |
+|   LAYER[40].PE01        |     0.002 |
+|   LAYER[40].PE02        |     0.001 |
+|   LAYER[40].PE10        |     0.003 |
+|   LAYER[40].PE11        |     0.003 |
+|   LAYER[40].PE12        |     0.003 |
+|   LAYER[40].PE20        |     0.004 |
+|   LAYER[40].PE21        |     0.004 |
+|   LAYER[40].PE22        |     0.004 |
+|   LAYER[41].INPUT0      |     0.004 |
+|   LAYER[41].PE00        |     0.002 |
+|   LAYER[41].PE01        |     0.002 |
+|   LAYER[41].PE02        |     0.001 |
+|   LAYER[41].PE10        |     0.003 |
+|   LAYER[41].PE11        |     0.003 |
+|   LAYER[41].PE12        |     0.003 |
+|   LAYER[41].PE20        |     0.004 |
+|   LAYER[41].PE21        |     0.004 |
+|   LAYER[41].PE22        |     0.004 |
+|   LAYER[42].INPUT0      |     0.003 |
+|   LAYER[42].PE00        |     0.002 |
+|   LAYER[42].PE01        |     0.002 |
+|   LAYER[42].PE02        |     0.001 |
+|   LAYER[42].PE10        |     0.003 |
+|   LAYER[42].PE11        |     0.003 |
+|   LAYER[42].PE12        |     0.003 |
+|   LAYER[42].PE20        |     0.004 |
+|   LAYER[42].PE21        |     0.004 |
+|   LAYER[42].PE22        |     0.004 |
+|   LAYER[43].INPUT0      |     0.004 |
+|   LAYER[43].PE00        |     0.002 |
+|   LAYER[43].PE01        |     0.002 |
+|   LAYER[43].PE02        |     0.001 |
+|   LAYER[43].PE10        |     0.003 |
+|   LAYER[43].PE11        |     0.003 |
+|   LAYER[43].PE12        |     0.003 |
+|   LAYER[43].PE20        |     0.004 |
+|   LAYER[43].PE21        |     0.004 |
+|   LAYER[43].PE22        |     0.004 |
+|   LAYER[44].INPUT0      |     0.004 |
+|   LAYER[44].PE00        |     0.002 |
+|   LAYER[44].PE01        |     0.002 |
+|   LAYER[44].PE02        |     0.001 |
+|   LAYER[44].PE10        |     0.003 |
+|   LAYER[44].PE11        |     0.003 |
+|   LAYER[44].PE12        |     0.003 |
+|   LAYER[44].PE20        |     0.004 |
+|   LAYER[44].PE21        |     0.004 |
+|   LAYER[44].PE22        |     0.004 |
+|   LAYER[45].INPUT0      |     0.004 |
+|   LAYER[45].PE00        |     0.002 |
+|   LAYER[45].PE01        |     0.002 |
+|   LAYER[45].PE02        |     0.001 |
+|   LAYER[45].PE10        |     0.003 |
+|   LAYER[45].PE11        |     0.003 |
+|   LAYER[45].PE12        |     0.003 |
+|   LAYER[45].PE20        |     0.004 |
+|   LAYER[45].PE21        |     0.004 |
+|   LAYER[45].PE22        |     0.004 |
+|   LAYER[46].INPUT0      |     0.004 |
+|   LAYER[46].PE00        |     0.002 |
+|   LAYER[46].PE01        |     0.002 |
+|   LAYER[46].PE02        |     0.001 |
+|   LAYER[46].PE10        |     0.003 |
+|   LAYER[46].PE11        |     0.003 |
+|   LAYER[46].PE12        |     0.003 |
+|   LAYER[46].PE20        |     0.004 |
+|   LAYER[46].PE21        |     0.004 |
+|   LAYER[46].PE22        |     0.004 |
+|   LAYER[47].INPUT0      |     0.004 |
+|   LAYER[47].PE00        |     0.002 |
+|   LAYER[47].PE01        |     0.002 |
+|   LAYER[47].PE02        |     0.001 |
+|   LAYER[47].PE10        |     0.003 |
+|   LAYER[47].PE11        |     0.003 |
+|   LAYER[47].PE12        |     0.003 |
+|   LAYER[47].PE20        |     0.004 |
+|   LAYER[47].PE21        |     0.004 |
+|   LAYER[47].PE22        |     0.004 |
+|   LAYER[48].INPUT0      |     0.004 |
+|   LAYER[48].PE00        |     0.002 |
+|   LAYER[48].PE01        |     0.002 |
+|   LAYER[48].PE02        |     0.001 |
+|   LAYER[48].PE10        |     0.003 |
+|   LAYER[48].PE11        |     0.003 |
+|   LAYER[48].PE12        |     0.003 |
+|   LAYER[48].PE20        |     0.004 |
+|   LAYER[48].PE21        |     0.004 |
+|   LAYER[48].PE22        |     0.004 |
+|   LAYER[49].INPUT0      |     0.004 |
+|   LAYER[49].PE00        |     0.002 |
+|   LAYER[49].PE01        |     0.002 |
+|   LAYER[49].PE02        |     0.001 |
+|   LAYER[49].PE10        |     0.003 |
+|   LAYER[49].PE11        |     0.003 |
+|   LAYER[49].PE12        |     0.003 |
+|   LAYER[49].PE20        |     0.004 |
+|   LAYER[49].PE21        |     0.004 |
+|   LAYER[49].PE22        |     0.004 |
+|   LAYER[4].INPUT0       |     0.004 |
+|   LAYER[4].PE00         |     0.002 |
+|   LAYER[4].PE01         |     0.002 |
+|   LAYER[4].PE02         |     0.001 |
+|   LAYER[4].PE10         |     0.003 |
+|   LAYER[4].PE11         |     0.003 |
+|   LAYER[4].PE12         |     0.003 |
+|   LAYER[4].PE20         |     0.004 |
+|   LAYER[4].PE21         |     0.004 |
+|   LAYER[4].PE22         |     0.004 |
+|   LAYER[50].INPUT0      |     0.004 |
+|   LAYER[50].PE00        |     0.002 |
+|   LAYER[50].PE01        |     0.002 |
+|   LAYER[50].PE02        |     0.001 |
+|   LAYER[50].PE10        |     0.003 |
+|   LAYER[50].PE11        |     0.003 |
+|   LAYER[50].PE12        |     0.003 |
+|   LAYER[50].PE20        |     0.004 |
+|   LAYER[50].PE21        |     0.004 |
+|   LAYER[50].PE22        |     0.004 |
+|   LAYER[51].INPUT0      |     0.004 |
+|   LAYER[51].PE00        |     0.002 |
+|   LAYER[51].PE01        |     0.002 |
+|   LAYER[51].PE02        |     0.001 |
+|   LAYER[51].PE10        |     0.003 |
+|   LAYER[51].PE11        |     0.003 |
+|   LAYER[51].PE12        |     0.003 |
+|   LAYER[51].PE20        |     0.004 |
+|   LAYER[51].PE21        |     0.004 |
+|   LAYER[51].PE22        |     0.004 |
+|   LAYER[52].INPUT0      |     0.004 |
+|   LAYER[52].PE00        |     0.002 |
+|   LAYER[52].PE01        |     0.002 |
+|   LAYER[52].PE02        |     0.001 |
+|   LAYER[52].PE10        |     0.003 |
+|   LAYER[52].PE11        |     0.003 |
+|   LAYER[52].PE12        |     0.003 |
+|   LAYER[52].PE20        |     0.004 |
+|   LAYER[52].PE21        |     0.004 |
+|   LAYER[52].PE22        |     0.004 |
+|   LAYER[53].INPUT0      |     0.004 |
+|   LAYER[53].PE00        |     0.002 |
+|   LAYER[53].PE01        |     0.002 |
+|   LAYER[53].PE02        |     0.001 |
+|   LAYER[53].PE10        |     0.003 |
+|   LAYER[53].PE11        |     0.003 |
+|   LAYER[53].PE12        |     0.003 |
+|   LAYER[53].PE20        |     0.004 |
+|   LAYER[53].PE21        |     0.004 |
+|   LAYER[53].PE22        |     0.004 |
+|   LAYER[54].INPUT0      |     0.004 |
+|   LAYER[54].PE00        |     0.002 |
+|   LAYER[54].PE01        |     0.002 |
+|   LAYER[54].PE02        |     0.001 |
+|   LAYER[54].PE10        |     0.003 |
+|   LAYER[54].PE11        |     0.003 |
+|   LAYER[54].PE12        |     0.003 |
+|   LAYER[54].PE20        |     0.004 |
+|   LAYER[54].PE21        |     0.004 |
+|   LAYER[54].PE22        |     0.004 |
+|   LAYER[55].INPUT0      |     0.004 |
+|   LAYER[55].PE00        |     0.002 |
+|   LAYER[55].PE01        |     0.002 |
+|   LAYER[55].PE02        |     0.001 |
+|   LAYER[55].PE10        |     0.003 |
+|   LAYER[55].PE11        |     0.003 |
+|   LAYER[55].PE12        |     0.003 |
+|   LAYER[55].PE20        |     0.004 |
+|   LAYER[55].PE21        |     0.004 |
+|   LAYER[55].PE22        |     0.004 |
+|   LAYER[56].INPUT0      |     0.004 |
+|   LAYER[56].PE00        |     0.002 |
+|   LAYER[56].PE01        |     0.002 |
+|   LAYER[56].PE02        |     0.001 |
+|   LAYER[56].PE10        |     0.003 |
+|   LAYER[56].PE11        |     0.003 |
+|   LAYER[56].PE12        |     0.003 |
+|   LAYER[56].PE20        |     0.004 |
+|   LAYER[56].PE21        |     0.004 |
+|   LAYER[56].PE22        |     0.004 |
+|   LAYER[57].INPUT0      |     0.004 |
+|   LAYER[57].PE00        |     0.002 |
+|   LAYER[57].PE01        |     0.002 |
+|   LAYER[57].PE02        |     0.001 |
+|   LAYER[57].PE10        |     0.003 |
+|   LAYER[57].PE11        |     0.003 |
+|   LAYER[57].PE12        |     0.003 |
+|   LAYER[57].PE20        |     0.004 |
+|   LAYER[57].PE21        |     0.004 |
+|   LAYER[57].PE22        |     0.004 |
+|   LAYER[58].INPUT0      |     0.004 |
+|   LAYER[58].PE00        |     0.002 |
+|   LAYER[58].PE01        |     0.002 |
+|   LAYER[58].PE02        |     0.001 |
+|   LAYER[58].PE10        |     0.003 |
+|   LAYER[58].PE11        |     0.003 |
+|   LAYER[58].PE12        |     0.003 |
+|   LAYER[58].PE20        |     0.004 |
+|   LAYER[58].PE21        |     0.004 |
+|   LAYER[58].PE22        |     0.004 |
+|   LAYER[59].INPUT0      |     0.004 |
+|   LAYER[59].PE00        |     0.002 |
+|   LAYER[59].PE01        |     0.002 |
+|   LAYER[59].PE02        |     0.001 |
+|   LAYER[59].PE10        |     0.003 |
+|   LAYER[59].PE11        |     0.003 |
+|   LAYER[59].PE12        |     0.003 |
+|   LAYER[59].PE20        |     0.004 |
+|   LAYER[59].PE21        |     0.004 |
+|   LAYER[59].PE22        |     0.004 |
+|   LAYER[5].INPUT0       |     0.004 |
+|   LAYER[5].PE00         |     0.002 |
+|   LAYER[5].PE01         |     0.002 |
+|   LAYER[5].PE02         |     0.001 |
+|   LAYER[5].PE10         |     0.003 |
+|   LAYER[5].PE11         |     0.003 |
+|   LAYER[5].PE12         |     0.003 |
+|   LAYER[5].PE20         |     0.004 |
+|   LAYER[5].PE21         |     0.004 |
+|   LAYER[5].PE22         |     0.004 |
+|   LAYER[60].INPUT0      |     0.004 |
+|   LAYER[60].PE00        |     0.002 |
+|   LAYER[60].PE01        |     0.002 |
+|   LAYER[60].PE02        |     0.001 |
+|   LAYER[60].PE10        |     0.003 |
+|   LAYER[60].PE11        |     0.003 |
+|   LAYER[60].PE12        |     0.003 |
+|   LAYER[60].PE20        |     0.004 |
+|   LAYER[60].PE21        |     0.004 |
+|   LAYER[60].PE22        |     0.004 |
+|   LAYER[61].INPUT0      |     0.004 |
+|   LAYER[61].PE00        |     0.002 |
+|   LAYER[61].PE01        |     0.002 |
+|   LAYER[61].PE02        |     0.001 |
+|   LAYER[61].PE10        |     0.003 |
+|   LAYER[61].PE11        |     0.003 |
+|   LAYER[61].PE12        |     0.003 |
+|   LAYER[61].PE20        |     0.004 |
+|   LAYER[61].PE21        |     0.004 |
+|   LAYER[61].PE22        |     0.004 |
+|   LAYER[62].INPUT0      |     0.004 |
+|   LAYER[62].PE00        |     0.002 |
+|   LAYER[62].PE01        |     0.002 |
+|   LAYER[62].PE02        |     0.001 |
+|   LAYER[62].PE10        |     0.003 |
+|   LAYER[62].PE11        |     0.003 |
+|   LAYER[62].PE12        |     0.003 |
+|   LAYER[62].PE20        |     0.004 |
+|   LAYER[62].PE21        |     0.004 |
+|   LAYER[62].PE22        |     0.004 |
+|   LAYER[63].INPUT0      |     0.004 |
+|   LAYER[63].PE00        |     0.002 |
+|   LAYER[63].PE01        |     0.002 |
+|   LAYER[63].PE02        |     0.001 |
+|   LAYER[63].PE10        |     0.003 |
+|   LAYER[63].PE11        |     0.003 |
+|   LAYER[63].PE12        |     0.003 |
+|   LAYER[63].PE20        |     0.004 |
+|   LAYER[63].PE21        |     0.004 |
+|   LAYER[63].PE22        |     0.004 |
+|   LAYER[64].INPUT0      |     0.004 |
+|   LAYER[64].PE00        |     0.002 |
+|   LAYER[64].PE01        |     0.002 |
+|   LAYER[64].PE02        |     0.001 |
+|   LAYER[64].PE10        |     0.003 |
+|   LAYER[64].PE11        |     0.003 |
+|   LAYER[64].PE12        |     0.003 |
+|   LAYER[64].PE20        |     0.004 |
+|   LAYER[64].PE21        |     0.004 |
+|   LAYER[64].PE22        |     0.004 |
+|   LAYER[65].INPUT0      |     0.004 |
+|   LAYER[65].PE00        |     0.002 |
+|   LAYER[65].PE01        |     0.002 |
+|   LAYER[65].PE02        |     0.001 |
+|   LAYER[65].PE10        |     0.003 |
+|   LAYER[65].PE11        |     0.003 |
+|   LAYER[65].PE12        |     0.003 |
+|   LAYER[65].PE20        |     0.004 |
+|   LAYER[65].PE21        |     0.004 |
+|   LAYER[65].PE22        |     0.004 |
+|   LAYER[66].INPUT0      |     0.004 |
+|   LAYER[66].PE00        |     0.002 |
+|   LAYER[66].PE01        |     0.002 |
+|   LAYER[66].PE02        |     0.001 |
+|   LAYER[66].PE10        |     0.003 |
+|   LAYER[66].PE11        |     0.003 |
+|   LAYER[66].PE12        |     0.003 |
+|   LAYER[66].PE20        |     0.004 |
+|   LAYER[66].PE21        |     0.004 |
+|   LAYER[66].PE22        |     0.004 |
+|   LAYER[67].INPUT0      |     0.005 |
+|   LAYER[67].PE00        |     0.002 |
+|   LAYER[67].PE01        |     0.002 |
+|   LAYER[67].PE02        |     0.001 |
+|   LAYER[67].PE10        |     0.003 |
+|   LAYER[67].PE11        |     0.003 |
+|   LAYER[67].PE12        |     0.003 |
+|   LAYER[67].PE20        |     0.004 |
+|   LAYER[67].PE21        |     0.004 |
+|   LAYER[67].PE22        |     0.004 |
+|   LAYER[68].INPUT0      |     0.003 |
+|   LAYER[68].PE00        |     0.002 |
+|   LAYER[68].PE01        |     0.002 |
+|   LAYER[68].PE02        |     0.001 |
+|   LAYER[68].PE10        |     0.003 |
+|   LAYER[68].PE11        |     0.003 |
+|   LAYER[68].PE12        |     0.003 |
+|   LAYER[68].PE20        |     0.004 |
+|   LAYER[68].PE21        |     0.004 |
+|   LAYER[68].PE22        |     0.004 |
+|   LAYER[69].INPUT0      |     0.003 |
+|   LAYER[69].PE00        |     0.002 |
+|   LAYER[69].PE01        |     0.002 |
+|   LAYER[69].PE02        |     0.001 |
+|   LAYER[69].PE10        |     0.003 |
+|   LAYER[69].PE11        |     0.003 |
+|   LAYER[69].PE12        |     0.003 |
+|   LAYER[69].PE20        |     0.004 |
+|   LAYER[69].PE21        |     0.004 |
+|   LAYER[69].PE22        |     0.004 |
+|   LAYER[6].INPUT0       |     0.004 |
+|   LAYER[6].PE00         |     0.002 |
+|   LAYER[6].PE01         |     0.002 |
+|   LAYER[6].PE02         |     0.001 |
+|   LAYER[6].PE10         |     0.003 |
+|   LAYER[6].PE11         |     0.003 |
+|   LAYER[6].PE12         |     0.003 |
+|   LAYER[6].PE20         |     0.004 |
+|   LAYER[6].PE21         |     0.004 |
+|   LAYER[6].PE22         |     0.004 |
+|   LAYER[7].INPUT0       |     0.004 |
+|   LAYER[7].PE00         |     0.002 |
+|   LAYER[7].PE01         |     0.002 |
+|   LAYER[7].PE02         |     0.001 |
+|   LAYER[7].PE10         |     0.003 |
+|   LAYER[7].PE11         |     0.003 |
+|   LAYER[7].PE12         |     0.003 |
+|   LAYER[7].PE20         |     0.004 |
+|   LAYER[7].PE21         |     0.004 |
+|   LAYER[7].PE22         |     0.004 |
+|   LAYER[8].INPUT0       |     0.004 |
+|   LAYER[8].PE00         |     0.002 |
+|   LAYER[8].PE01         |     0.002 |
+|   LAYER[8].PE02         |     0.001 |
+|   LAYER[8].PE10         |     0.003 |
+|   LAYER[8].PE11         |     0.003 |
+|   LAYER[8].PE12         |     0.003 |
+|   LAYER[8].PE20         |     0.004 |
+|   LAYER[8].PE21         |     0.004 |
+|   LAYER[8].PE22         |     0.004 |
+|   LAYER[9].INPUT0       |     0.004 |
+|   LAYER[9].PE00         |     0.002 |
+|   LAYER[9].PE01         |     0.002 |
+|   LAYER[9].PE02         |     0.001 |
+|   LAYER[9].PE10         |     0.003 |
+|   LAYER[9].PE11         |     0.003 |
+|   LAYER[9].PE12         |     0.003 |
+|   LAYER[9].PE20         |     0.004 |
+|   LAYER[9].PE21         |     0.004 |
+|   LAYER[9].PE22         |     0.004 |
+|   OUTPUT0               |     0.006 |
+|     DSHIFT              |     0.004 |
+|     OVERFLOW            |     0.001 |
+|   OUTPUT1               |     0.005 |
+|     DSHIFT              |     0.004 |
+|     OVERFLOW            |     0.001 |
+|   OUTPUT2               |     0.007 |
+|     DSHIFT              |     0.005 |
+|     OVERFLOW            |     0.002 |
++-------------------------+-----------+
+
+
